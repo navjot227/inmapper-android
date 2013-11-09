@@ -6,6 +6,17 @@
     <string name="hello_world">Hello world!</string>
     <string name="hello_world2">Hello world2!</string>
     <string name="title_activity_map">MapActivity</string>
+    <string name="title_activity_sensors">SensorsActivity</string>
+    <string name="button_sensor">Sensor</string>
     <string name="button_map">Map</string>
-
-</resources>
+    <string name="indoor_map">INDOOR MAPPING INFORMATION</string>
+    <string name="sensor_data">CURRENT DATA INFORMATION</string>
+    <string name="roomid">Room Identification</string>
+    <string name="height">Height of the user</string>
+    <string name="button_start">Start</string>
+    <string name="button_stop">Stop</string>
+    <string name="x">X</string>
+    <string name="y">Y</string>
+    <string name="z">Z</string>
+    <string name="h">Heading</string>
+ </resources>
