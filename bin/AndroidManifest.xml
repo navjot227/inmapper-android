@@ -13,6 +13,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
+        android:screenOrientation="portrait"
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.sampleone.MainActivity"
@@ -26,11 +27,23 @@
         <activity
             android:name="com.example.sampleone.MapActivity"
             android:label="@string/title_activity_map"
+            android:screenOrientation="portrait"
             android:parentActivityName="com.example.sampleone.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.sampleone.MainActivity" />
         </activity>
+        <activity
+            android:name="com.example.sampleone.SensorsActivity"
+            android:label="@string/title_activity_sensors"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.example.sampleone.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sampleone.MainActivity" />
+            
+        </activity>
+            
     </application>
 
 

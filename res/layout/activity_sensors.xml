@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+     <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#22429F"
+        android:layout_marginLeft="51dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/indoor_map" />
+    
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/roomid"
+        android:focusable="true" android:focusableInTouchMode="true"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="" >
+    </EditText>
+        <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/height"
+        android:focusable="true" android:focusableInTouchMode="true"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="6dp"
+        android:ems="10"
+        android:inputType="" >
+    </EditText>
+    <TextView
+        android:id="@+id/textView0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#22429F"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="51dp"
+        android:text="@string/sensor_data" />
+    
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/x" />
+    <View
+         android:layout_width="fill_parent"
+         android:layout_height="0.2dp"
+         android:id="@+id/separator1"
+         android:visibility="visible"
+         android:background="@android:color/darker_gray"/>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/y" />
+    <View
+         android:layout_width="fill_parent"
+         android:layout_height="0.2dp"
+         android:id="@+id/separator2"
+         android:visibility="visible"
+         android:background="@android:color/darker_gray"/>
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/z" />
+    <View
+         android:layout_width="fill_parent"
+         android:layout_height="0.2dp"
+         android:id="@+id/separator3"
+         android:visibility="visible"
+         android:background="@android:color/darker_gray"/>
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/h" /> 
+    <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+    <Button
+        android:id="@+id/start"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="41dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/button_start"
+        android:onClick="startSensing" />
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/button_stop"
+        android:onClick="stopSensing" />
+
+</LinearLayout> 
+</LinearLayout>
