@@ -49,17 +49,8 @@ public class MapActivity extends Activity {
 
         @Override
         protected void onPostExecute(RoomPointList result) {
-            // System.out.println("result.length = " + result.size());
-            for (RoomPointTo roomPointTo : result.getUserMappings().values()
-                    .iterator().next()) {
-                System.out.println(roomPointTo.getMobileId());
-                System.out.println(roomPointTo.getRoomId());
-                System.out.println(roomPointTo.getX());
-                System.out.println(roomPointTo.getY());
-
-            }
-            // TODO: check this.exception
-            // TODO: do something with the feed
+            mCustomDrawableView.setRoomPoints(result.getUserMappings().values());
+            mCustomDrawableView.invalidate();
         }
     }
 

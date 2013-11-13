@@ -1,45 +1,57 @@
 package com.example.sampleone;
 
-import java.util.Random;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.drawable.ShapeDrawable;
-import android.graphics.drawable.shapes.OvalShape;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.view.View;
 
 public class CustomDrawableView extends View {
-    private final ShapeDrawable mDrawable;
-    private final Random rand = new Random();
+
+    private Collection<List<RoomPointTo>> roomPoints;
+
+    public Collection<List<RoomPointTo>> getRoomPoints() {
+        return roomPoints;
+    }
+
+    public void setRoomPoints(Collection<List<RoomPointTo>> roomPoints) {
+        this.roomPoints = roomPoints;
+    }
 
     public CustomDrawableView(Context context) {
         super(context);
-
-        int x = 10;
-        int y = 10;
-        int width = 300;
-        int height = 50;
-
-        mDrawable = new ShapeDrawable(new OvalShape());
-        mDrawable.getPaint().setColor(0xff74AC23);
-        mDrawable.setBounds(x, y, x + width, y + height);
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
-        mDrawable.draw(canvas);
-    }
 
-    public void changeShape() {
-        // while (true) {
-        /*
-         * try { Thread.currentThread(); Thread.sleep(10000); } catch
-         * (InterruptedException e) { // TODO Auto-generated catch block
-         * e.printStackTrace(); }
-         */
-        mDrawable.setBounds(10, 10, 300 + rand.nextInt(500),
-                50 + rand.nextInt(200));
+        Paint p = new Paint(Paint.ANTI_ALIAS_FLAG);
+        System.out.println("getHeight() " + getHeight());
+        System.out.println("getWidth() " + getWidth());
+        float[] arr = { 5, 5, 5, getHeight() - 5, 5, getHeight() - 5, getWidth() - 5, getHeight() - 5, getWidth() - 5,
+                getHeight() - 5, getWidth() - 5, 5, getWidth() - 5, 5, 5, 5 };
+        Iterator<List<RoomPointTo>> iterator;
+        p.setColor(Color.BLACK);
+        p.setStyle(Paint.Style.STROKE);
 
+        canvas.drawLines(arr, 0, 16, p);
+        p.setStyle(Paint.Style.FILL);
+        // canvas.drawRect(0, 0, getWidth(), getHeight(), p);
+
+        if (roomPoints != null) {
+            iterator = roomPoints.iterator();
+            for (RoomPointTo roomPointTo : iterator.next()) {
+
+                // canvas.drawPoint(roomPointTo.getX().floatValue(),
+                // roomPointTo.getY().floatValue(), p);
+                canvas.drawCircle(roomPointTo.getX().floatValue() * 7, roomPointTo.getY().floatValue() * 7, 7, p);
+
+            }
+        }
     }
 
 }

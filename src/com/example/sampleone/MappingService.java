@@ -15,8 +15,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 public class MappingService {
-    // private static final String SERVICE_URL = "http://10.0.2.2:8080";
-    private static final String SERVICE_URL = "http://172.31.34.89:8080";
+    private static final String SERVICE_URL = "http://10.0.2.2:8080";
+    // private static final String SERVICE_URL = "http://172.31.34.89:8080";
     private static final String V_TOKEN = SERVICE_URL + "/api/v/token";
 
     private static final String V_SAMPLE_ROOM_MAPPINGS = SERVICE_URL + "/api/v/sample_room/mappings";
